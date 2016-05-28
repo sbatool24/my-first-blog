@@ -7,7 +7,14 @@
       <h1><a href="">Django Girls Blog</a></h1>
     </div>
 
-    <div>
+    {% for post in posts %}
+      <div>
+         <p>puublished: {{ post.published_date }}</p>
+	 <h1><a href="">{{ post.title }}</a></h1>
+	 <p>{{ post.text|linebreaks }}</p>
+      </div>
+    {% endfor %}
+   <!-- <div>
       <p>published: 14.06.2014, 12:14</p>
       <h2><a href="">My first post</a></h2>
       <p>Aenean eu leo quam.</p>
@@ -17,6 +24,7 @@
       <p>published: 14.06.2014, 12:14</p>
       <h2><a href="">Mysecond post</a></h2>
       <p>Aenean eu leo quam.boo</p>
-    </div>  
+    </div> -->
+
   </body>
 </html>
